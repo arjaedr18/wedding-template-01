@@ -1,0 +1,46 @@
+/* General */
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('assets/images/cover.jpg') center/cover no-repeat;
+  position: relative;
+  color: white;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.4);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+/* Event Section */
+.event, .rsvp {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+  color: #333;
+}
+
+.event h2, .rsvp h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
