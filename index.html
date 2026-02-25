@@ -5,8 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arjae & Thea Wedding</title>
 
+<!-- Logos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- AOS Animation -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+<!-- Custom CSS -->
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -36,16 +44,25 @@
 <section class="section light" data-aos="fade-up">
   <h2>Event Schedule</h2>
   <div class="schedule">
-    <div>
+
+    <!-- Ceremony -->
+    <div class="event-card">
+      <img src="assets/images/church.jpg" alt="Church" class="event-img">
       <h3>Ceremony</h3>
       <p>3:00 PM</p>
-      <p>Parish of the Immaculate Heart of Mary</p>
+      <p>Parish of the Immaculate Heart of Mary, Antipolo City, Rizal</p>
+      <a href="https://www.google.com/maps?q=Parish+of+the+Immaculate+Heart+of+Mary+Antipolo" target="_blank" class="btn-small">View Map</a>
     </div>
-    <div>
+
+    <!-- Reception -->
+    <div class="event-card">
+      <img src="assets/images/reception.jpg" alt="Reception" class="event-img">
       <h3>Reception</h3>
       <p>6:00 PM</p>
-      <p>Antipolo City</p>
+      <p>The Garden Hive Events Place, Antipolo City, Rizal</p>
+      <a href="https://maps.app.goo.gl/sYUdD5PjLdVrB3ey9" target="_blank" class="btn-small">View Map</a>
     </div>
+
   </div>
 </section>
 
@@ -62,24 +79,15 @@
   </div>
 </section>
 
-<!-- MAP -->
-<section class="section light" data-aos="fade-up">
-  <h2>Venue Location</h2>
-  <iframe 
-    src="https://maps.google.com/maps?q=Parish%20of%20the%20Immaculate%20Heart%20of%20Mary%20Antipolo&t=&z=15&ie=UTF8&iwloc=&output=embed"
-    width="100%" height="350" style="border:0;" allowfullscreen loading="lazy">
-  </iframe>
-</section>
-
 <!-- DRESS CODE -->
-<section class="section" data-aos="fade-up">
+<section class="section light" data-aos="fade-up">
   <h2>Dress Code</h2>
   <p>Formal Attire</p>
   <p>Please avoid wearing white or off-white tones.</p>
 </section>
 
-<!-- REGISTRY -->
-<section class="section light" data-aos="fade-up">
+<!-- REGISTRY & GIFTS -->
+<section class="section" data-aos="fade-up">
   <h2>Registry & Gifts</h2>
   
   <p class="gift-message">
@@ -106,10 +114,27 @@
     </div>
 
   </div>
+
+  <div class="guest-actions">
+
+    <a href="https://drive.google.com/drive/folders/1C8G8k7dVoA4-jaf3KnfpBV0IXPcW0Lt9?usp=sharing" target="_blank" class="action-card">
+      <i class="fa fa-upload action-icon" aria-hidden="true"></i>
+      <h3>Share Your Photos</h3>
+      <p>Upload your memories from the event here.</p>
+    </a>
+
+    <a href="assets/docs/wedding-program.pdf" target="_blank" class="action-card">
+      <i class="fa fa-file-pdf-o action-icon" aria-hidden="true"></i>
+      <h3>Wedding Program</h3>
+      <p>Download the complete wedding program in PDF.</p>
+    </a>
+
+</div>
+
 </section>
 
 <!-- RSVP -->
-<section id="rsvp" class="section" data-aos="fade-up">
+<section id="rsvp" class="section light" data-aos="fade-up">
   <h2>RSVP</h2>
   <a href="https://forms.gle/hrAmqvdcCH5WxZmt9" target="_blank" class="btn">
     Click Here to RSVP
@@ -120,10 +145,12 @@
   <p>With love, Arjae & Thea</p>
 </footer>
 
+<!-- Background Music -->
 <audio id="bg-music" autoplay loop muted>
   <source src="assets/music/song.mp3" type="audio/mpeg">
 </audio>
 
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="script.js"></script>
 </body>

@@ -47,6 +47,7 @@ p { font-size:1.2rem; line-height:1.8; }
   align-items:center;
   color:white;
   background:rgba(0,0,0,0.4);
+  text-align:center;
 }
 
 .date { margin:10px 0; }
@@ -72,11 +73,39 @@ p { font-size:1.2rem; line-height:1.8; }
   transform:scale(1.05);
 }
 
+.btn-small {
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 25px;
+  border-radius:30px;
+  background:#c48b9f;
+  color:white;
+  text-decoration:none;
+  font-size:1rem;
+  transition:0.3s;
+}
+
+.btn-small:hover {
+  background:#b47489;
+  transform:scale(1.05);
+}
+
 .schedule {
   display:flex;
   justify-content:center;
-  gap:60px;
+  gap:40px;
   flex-wrap:wrap;
+}
+
+.event-card {
+  text-align:center;
+  max-width:300px;
+}
+
+.event-img {
+  width:100%;
+  border-radius:15px;
+  margin-bottom:15px;
 }
 
 .gallery {
@@ -106,6 +135,7 @@ footer {
   h1{font-size:2.5rem;}
   h2{font-size:2rem;}
 }
+
 .gift-message {
   font-style: italic;
   margin-bottom: 15px;
@@ -138,4 +168,55 @@ footer {
 
 .qr-image:hover {
   transform: scale(1.05);
+}
+
+.upload-note, .pdf-download {
+  margin-top:20px;
+  font-size:1rem;
+}
+.guest-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  width: 220px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.action-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.action-card h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.action-card p {
+  font-size: 0.95rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.action-icon {
+  width: 60px;
+  height: 60px;
+}
+.action-icon {
+  font-size: 60px;
+  color: #c48b9f;
 }
