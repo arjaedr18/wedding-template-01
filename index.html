@@ -1,73 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arjae & Thea Wedding</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arjae & Thea Wedding</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-
-  <!-- AOS Animation -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <img src="assets/images/cover.jpg" alt="Wedding Cover" class="hero-image">
-    <div class="overlay">
-      <h1 class="hero-text" data-aos="fade-up" data-aos-duration="1200">Arjae & Thea</h1>
-      <p class="hero-text" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1200">December 1, 2027</p>
-      <p id="countdown" class="hero-text" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1200"></p>
-      <a href="#rsvp" class="rsvp-btn hero-text" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1200">RSVP</a>
-    </div>
-  </section>
-
-  <!-- Event Details Section -->
-  <section class="event" data-aos="fade-up">
-    <h2>Event Details</h2>
-    <p>Date: December 1, 2027</p>
-    <p>Venue: Parish of the Immaculate Heart of Mary, Antipolo City</p>
-  </section>
-
-  <!-- RSVP Section -->
-  <section id="rsvp" class="rsvp" data-aos="fade-up">
-    <h2>RSVP</h2>
-    <a href="https://forms.gle/hrAmqvdcCH5WxZmt9" target="_blank">Click Here to RSVP</a>
-  </section>
-
-  <!-- Music Controls -->
-  <div class="music-control">
-    <button id="music-toggle">Pause Music</button>
+<!-- HERO -->
+<section class="hero">
+  <img src="assets/images/cover.jpg" class="hero-img">
+  <div class="overlay">
+    <h1>Arjae & Thea</h1>
+    <p class="date">December 1, 2027</p>
+    <p id="countdown"></p>
+    <a href="#rsvp" class="btn">RSVP</a>
   </div>
+</section>
 
-  <!-- Background Music -->
-  <audio id="bg-music" autoplay loop>
-    <source src="assets/music/song.mp3" type="audio/mpeg">
-  </audio>
+<!-- OUR STORY -->
+<section class="section" data-aos="fade-up">
+  <h2>Our Story</h2>
+  <p>
+    We met unexpectedly, became best friends, and found love in the simplest moments.
+    Through seasons of growth and faith, we discovered that we were meant to walk this life together.
+  </p>
+</section>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="script.js"></script>
-  <script>
-    AOS.init({ duration: 1200, once: true });
+<!-- EVENT SCHEDULE -->
+<section class="section light" data-aos="fade-up">
+  <h2>Event Schedule</h2>
+  <div class="schedule">
+    <div>
+      <h3>Ceremony</h3>
+      <p>3:00 PM</p>
+      <p>Parish of the Immaculate Heart of Mary</p>
+    </div>
+    <div>
+      <h3>Reception</h3>
+      <p>6:00 PM</p>
+      <p>Antipolo City</p>
+    </div>
+  </div>
+</section>
 
-    // Smooth scroll for hero RSVP button
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
+<!-- GALLERY -->
+<section class="section" data-aos="fade-up">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="assets/images/gallery1.jpg">
+    <img src="assets/images/gallery2.jpg">
+    <img src="assets/images/gallery3.jpg">
+    <img src="assets/images/gallery4.jpg">
+    <img src="assets/images/gallery5.jpg">
+    <img src="assets/images/gallery6.jpg">
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="section light" data-aos="fade-up">
+  <h2>Venue Location</h2>
+  <iframe 
+    src="https://maps.google.com/maps?q=Parish%20of%20the%20Immaculate%20Heart%20of%20Mary%20Antipolo&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    width="100%" height="350" style="border:0;" allowfullscreen loading="lazy">
+  </iframe>
+</section>
+
+<!-- DRESS CODE -->
+<section class="section" data-aos="fade-up">
+  <h2>Dress Code</h2>
+  <p>Formal Attire</p>
+  <p>Please avoid wearing white or off-white tones.</p>
+</section>
+
+<!-- REGISTRY -->
+<section class="section light" data-aos="fade-up">
+  <h2>Registry & Gifts</h2>
+  
+  <p class="gift-message">
+    Your presence at our wedding is the greatest gift of all.
+  </p>
+
+  <p>
+    Should you wish to bless us with a gift, a monetary offering
+    would be deeply appreciated as we begin our new life together.
+  </p>
+
+  <div class="gift-container">
+    
+    <div class="bank-details">
+      <h3>Bank Transfer</h3>
+      <p><strong>Bank Name:</strong> BPI</p>
+      <p><strong>Account Name:</strong> Arjae Del Rosario</p>
+      <p><strong>Account Number:</strong> 1234 5678 9012</p>
+    </div>
+
+    <div class="qr-section">
+      <h3>Scan QR Code</h3>
+      <img src="assets/images/bank-qr.png" alt="Bank QR Code" class="qr-image">
+    </div>
+
+  </div>
+</section>
+
+<!-- RSVP -->
+<section id="rsvp" class="section" data-aos="fade-up">
+  <h2>RSVP</h2>
+  <a href="https://forms.gle/hrAmqvdcCH5WxZmt9" target="_blank" class="btn">
+    Click Here to RSVP
+  </a>
+</section>
+
+<footer>
+  <p>With love, Arjae & Thea</p>
+</footer>
+
+<audio id="bg-music" autoplay loop muted>
+  <source src="assets/music/song.mp3" type="audio/mpeg">
+</audio>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

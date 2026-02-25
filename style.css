@@ -1,201 +1,141 @@
-/* -------------------------
-   Reset
-------------------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin:0; padding:0; box-sizing:border-box; }
 
-body, html {
+body {
   font-family: 'Playfair Display', serif;
-  height: 100%;
-  background-color: #fff;
-  scroll-behavior: smooth;
+  color:#333;
+  scroll-behavior:smooth;
 }
 
-/* -------------------------
-   Hero Section
-------------------------- */
+.section {
+  padding:80px 20px;
+  text-align:center;
+  max-width:900px;
+  margin:auto;
+}
+
+.section.light {
+  background:#f8f8f8;
+}
+
+h1 { font-size:3.5rem; }
+h2 { font-size:2.5rem; margin-bottom:25px; }
+h3 { font-size:1.4rem; }
+
+p { font-size:1.2rem; line-height:1.8; }
+
 .hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
+  height:100vh;
+  position:relative;
+  overflow:hidden;
 }
 
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  transform: scale(1.05);
-  transition: transform 0.5s ease;
-}
-
-.hero:hover .hero-image {
-  transform: scale(1.1);
+.hero-img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  z-index:1;
 }
 
 .overlay {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0 20px;
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  background:rgba(0,0,0,0.4);
 }
 
-.hero-text {
-  transform: translateY(0);
-  transition: transform 0.5s ease;
-}
+.date { margin:10px 0; }
 
-.hero:hover .hero-text {
-  transform: translateY(-5px);
-}
-
-.overlay h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
-}
-
-.overlay p {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
-}
-
-/* Hero RSVP Button */
-.rsvp-btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 15px 40px;
-  background: #ff4081;
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-}
-
-.rsvp-btn:hover {
-  background: #e73370;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-}
-
-/* Countdown Timer */
 #countdown {
-  font-size: 2rem;
-  margin-top: 15px;
-  font-weight: bold;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  font-size:1.8rem;
+  margin-top:10px;
 }
 
-/* Event Section */
-.event {
-  padding: 80px 20px;
+.btn {
+  margin-top:20px;
+  padding:14px 40px;
+  border-radius:50px;
+  background:#c48b9f;
+  color:white;
+  text-decoration:none;
+  font-size:1.1rem;
+  transition:0.3s;
+}
+
+.btn:hover {
+  background:#b47489;
+  transform:scale(1.05);
+}
+
+.schedule {
+  display:flex;
+  justify-content:center;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+
+.gallery img {
+  width:100%;
+  border-radius:10px;
+  transition:0.4s;
+}
+
+.gallery img:hover {
+  transform:scale(1.05);
+}
+
+footer {
+  padding:40px;
+  text-align:center;
+  background:#222;
+  color:white;
+}
+
+@media(max-width:768px){
+  h1{font-size:2.5rem;}
+  h2{font-size:2rem;}
+}
+.gift-message {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.gift-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.bank-details {
+  text-align: left;
+  font-size: 16px;
+}
+
+.qr-section {
   text-align: center;
-  background-color: #fefefe;
 }
 
-.event h2 {
-  font-size: 2.5rem;
-  margin-bottom: 25px;
+.qr-image {
+  width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
 }
 
-.event p {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-/* RSVP Section */
-.rsvp {
-  padding: 80px 20px;
-  text-align: center;
-  background-color: #f8f8f8;
-}
-
-.rsvp h2 {
-  font-size: 2.5rem;
-  margin-bottom: 25px;
-}
-
-.rsvp a {
-  display: inline-block;
-  padding: 15px 40px;
-  background: #ff4081;
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-}
-
-.rsvp a:hover {
-  background: #e73370;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-}
-
-/* Music Control */
-.music-control {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 10;
-}
-
-.music-control button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 50px;
-  background: rgba(255,64,129,0.85);
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.music-control button:hover {
-  background: rgba(231,51,112,0.85);
+.qr-image:hover {
   transform: scale(1.05);
-}
-
-/* Fade-in Animations */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-}
-
-.delay1 { animation-delay: 0.5s; }
-.delay2 { animation-delay: 1s; }
-.delay3 { animation-delay: 1.5s; }
-
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .overlay h1 {
-    font-size: 2.5rem;
-  }
-  .overlay p {
-    font-size: 1.2rem;
-  }
-  #countdown {
-    font-size: 1.5rem;
-  }
-  .rsvp-btn, .rsvp a {
-    padding: 12px 30px;
-    font-size: 1rem;
-  }
 }
