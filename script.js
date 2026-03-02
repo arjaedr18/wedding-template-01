@@ -62,3 +62,24 @@ playButton.addEventListener('click', () => {
   playButton.style.display = 'none'; // hide button
   video.setAttribute('controls', ''); // show native controls
 });
+// FAQ Accordion
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  question.addEventListener('click', () => {
+    const answer = item.querySelector('.faq-answer');
+    if(answer.style.maxHeight){
+      answer.style.maxHeight = null;
+      answer.style.padding = "0 25px";
+    } else {
+      // close all other open items
+      faqItems.forEach(i => {
+        i.querySelector('.faq-answer').style.maxHeight = null;
+        i.querySelector('.faq-answer').style.padding = "0 25px";
+      });
+      answer.style.maxHeight = answer.scrollHeight + "px";
+      answer.style.padding = "15px 25px";
+    }
+  });
+});
