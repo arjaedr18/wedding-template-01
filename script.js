@@ -3,24 +3,30 @@ AOS.init({ duration: 1200, once: true });
 
 // COUNTDOWN
 const countdown = document.getElementById('countdown');
-const weddingDate = new Date("2027-12-01T15:00:00").getTime();
+
+// Set your wedding date and time (November 26, 2027 at 3:00 PM)
+const weddingDate = new Date("2027-11-26T15:00:00").getTime();
 
 function updateCountdown() {
-  const now = new Date().getTime();
-  const distance = weddingDate - now;
+  const now = new Date().getTime(); // current time
+  const distance = weddingDate - now; // time difference in milliseconds
 
-  if(distance < 0) {
+  if (distance <= 0) {
     countdown.innerHTML = "We're Married!";
     return;
   }
 
-  const d = Math.floor(distance / (1000*60*60*24));
-  const h = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-  const m = Math.floor((distance % (1000*60*60)) / (1000*60));
-  const s = Math.floor((distance % (1000*60)) / 1000);
+  // Calculate time components
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  countdown.innerHTML = `${d}d ${h}h ${m}m ${s}s`;
+  // Display countdown
+  countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
+
+// Update countdown every second
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
