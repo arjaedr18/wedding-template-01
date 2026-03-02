@@ -1,157 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arjae & Thea Wedding</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arjae & Thea | Wedding</title>
 
-<!-- Logos -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- AOS Animation -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
-<!-- Custom CSS -->
-<link rel="stylesheet" href="style.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <img src="assets/images/cover.jpg" class="hero-img">
-  <div class="overlay">
-    <h1>Arjae & Thea</h1>
-    <p class="date">December 1, 2027</p>
-    <p id="countdown"></p>
-    <a href="#rsvp" class="btn">RSVP</a>
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-content">
+      <h1>Arjae & Thea</h1>
+      <p>December 1, 2027</p>
+    </div>
+  </div>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="progress-bar"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="assets/images/cover.jpg" alt="Wedding Cover" class="hero-img">
+    <div class="overlay">
+      <h1 data-aos="fade-up">Arjae & Thea</h1>
+      <p class="date" data-aos="fade-up" data-aos-delay="200">December 1, 2027</p>
+      <p id="countdown" data-aos="fade-up" data-aos-delay="400"></p>
+      <a href="#rsvp" class="btn" data-aos="fade-up" data-aos-delay="600">RSVP</a>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="section" data-aos="fade-up">
+    <h2>Our Story</h2>
+    <p>
+      We met unexpectedly, became best friends, and found love in the simplest moments.
+      Through seasons of growth and faith, we discovered that we were meant to walk this life together.
+    </p>
+  </section>
+
+<!-- CINEMATIC VIDEO -->
+<section class="cinematic-video">
+  <video id="wedding-video" class="bg-video" muted>
+    <source src="assets/videos/wedding-film.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Custom Play Button -->
+  <div class="video-play-button" id="video-play-button">
+    <i class="fa fa-play"></i>
+  </div>
+
+  <div class="video-caption" data-aos="fade-up" data-aos-delay="200">
+    <h2>Our Love Story</h2>
+    <p>A glimpse into our journey together</p>
   </div>
 </section>
 
-<!-- OUR STORY -->
-<section class="section" data-aos="fade-up">
-  <h2>Our Story</h2>
-  <p>
-    We met unexpectedly, became best friends, and found love in the simplest moments.
-    Through seasons of growth and faith, we discovered that we were meant to walk this life together.
-  </p>
-</section>
-
-<!-- EVENT SCHEDULE -->
-<section class="section light" data-aos="fade-up">
-  <h2>Event Schedule</h2>
-  <div class="schedule">
-
-    <!-- Ceremony -->
-    <div class="event-card">
-      <img src="assets/images/church.jpg" alt="Church" class="event-img">
-      <h3>Ceremony</h3>
-      <p>3:00 PM</p>
-      <p>Parish of the Immaculate Heart of Mary, Antipolo City, Rizal</p>
-      <a href="https://www.google.com/maps?q=Parish+of+the+Immaculate+Heart+of+Mary+Antipolo" target="_blank" class="btn-small">View Map</a>
+  <!-- GALLERY -->
+  <section class="section" data-aos="fade-up">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="assets/images/gallery1.jpg" alt="Gallery Image 1">
+      <img src="assets/images/gallery2.jpg" alt="Gallery Image 2">
+      <img src="assets/images/gallery3.jpg" alt="Gallery Image 3">
+      <img src="assets/images/gallery4.jpg" alt="Gallery Image 4">
+      <img src="assets/images/gallery5.jpg" alt="Gallery Image 5">
+      <img src="assets/images/gallery6.jpg" alt="Gallery Image 6">
     </div>
+  </section>
 
-    <!-- Reception -->
-    <div class="event-card">
-      <img src="assets/images/reception.jpg" alt="Reception" class="event-img">
-      <h3>Reception</h3>
-      <p>6:00 PM</p>
-      <p>The Garden Hive Events Place, Antipolo City, Rizal</p>
-      <a href="https://maps.app.goo.gl/sYUdD5PjLdVrB3ey9" target="_blank" class="btn-small">View Map</a>
+  <!-- DRESS CODE -->
+  <section class="section glass" data-aos="fade-up">
+    <h2>Dress Code</h2>
+    <p>Formal Attire</p>
+    <p>Please avoid wearing white or off-white tones.</p>
+  </section>
+
+  <!-- REGISTRY -->
+  <section class="section" data-aos="fade-up">
+    <h2>Registry & Gifts</h2>
+    <p>Your presence at our wedding is the greatest gift of all.</p>
+
+    <div class="gift-container">
+      <div class="bank-details">
+        <h3>Bank Transfer</h3>
+        <p><strong>Bank:</strong> BPI</p>
+        <p><strong>Account Name:</strong> Arjae Del Rosario</p>
+        <p><strong>Account Number:</strong> 1234 5678 9012</p>
+      </div>
+
+      <div>
+        <img src="assets/images/bank-qr.png" alt="Bank QR Code" class="qr-image">
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- EVENT SCHEDULE -->
+  <section class="section glass" data-aos="fade-up">
+    <h2>Event Schedule</h2>
 
-<!-- GALLERY -->
-<section class="section" data-aos="fade-up">
-  <h2>Gallery</h2>
-  <div class="gallery">
-    <img src="assets/images/gallery1.jpg">
-    <img src="assets/images/gallery2.jpg">
-    <img src="assets/images/gallery3.jpg">
-    <img src="assets/images/gallery4.jpg">
-    <img src="assets/images/gallery5.jpg">
-    <img src="assets/images/gallery6.jpg">
-  </div>
-</section>
+    <div class="schedule">
+      <div class="event-card">
+        <img src="assets/images/church.jpg" alt="Church Location">
+        <h3>Ceremony</h3>
+        <p>3:00 PM</p>
+        <p>
+          Parish of the Immaculate Heart of Mary<br>
+          Antipolo City, Rizal
+        </p>
+        <a href="https://www.google.com/maps?q=Parish+of+the+Immaculate+Heart+of+Mary+Antipolo" target="_blank" class="btn-small">
+          View Map
+        </a>
+      </div>
 
-<!-- DRESS CODE -->
-<section class="section light" data-aos="fade-up">
-  <h2>Dress Code</h2>
-  <p>Formal Attire</p>
-  <p>Please avoid wearing white or off-white tones.</p>
-</section>
-
-<!-- REGISTRY & GIFTS -->
-<section class="section" data-aos="fade-up">
-  <h2>Registry & Gifts</h2>
-  
-  <p class="gift-message">
-    Your presence at our wedding is the greatest gift of all.
-  </p>
-
-  <p>
-    Should you wish to bless us with a gift, a monetary offering
-    would be deeply appreciated as we begin our new life together.
-  </p>
-
-  <div class="gift-container">
-    
-    <div class="bank-details">
-      <h3>Bank Transfer</h3>
-      <p><strong>Bank Name:</strong> BPI</p>
-      <p><strong>Account Name:</strong> Arjae Del Rosario</p>
-      <p><strong>Account Number:</strong> 1234 5678 9012</p>
+      <div class="event-card">
+        <img src="assets/images/reception.jpg" alt="Reception Location">
+        <h3>Reception</h3>
+        <p>6:00 PM</p>
+        <p>
+          The Garden Hive Events Place<br>
+          Antipolo City, Rizal
+        </p>
+        <a href="https://maps.app.goo.gl/sYUdD5PjLdVrB3ey9" target="_blank" class="btn-small">
+          View Map
+        </a>
+      </div>
     </div>
+  </section>
 
-    <div class="qr-section">
-      <h3>Scan QR Code</h3>
-      <img src="assets/images/bank-qr.png" alt="Bank QR Code" class="qr-image">
-    </div>
-
-  </div>
-
-  <div class="guest-actions">
-
-    <a href="https://drive.google.com/drive/folders/1C8G8k7dVoA4-jaf3KnfpBV0IXPcW0Lt9?usp=sharing" target="_blank" class="action-card">
-      <i class="fa fa-upload action-icon" aria-hidden="true"></i>
-      <h3>Share Your Photos</h3>
-      <p>Upload your memories from the event here.</p>
+  <!-- RSVP -->
+  <section id="rsvp" class="section rsvp-section" data-aos="fade-up">
+    <h2>RSVP</h2>
+    <a href="https://forms.gle/hrAmqvdcCH5WxZmt9" target="_blank" class="btn">
+      Confirm Attendance
     </a>
+  </section>
 
-    <a href="assets/docs/wedding-program.pdf" target="_blank" class="action-card">
-      <i class="fa fa-file-pdf-o action-icon" aria-hidden="true"></i>
-      <h3>Wedding Program</h3>
-      <p>Download the complete wedding program in PDF.</p>
-    </a>
+  <!-- FOOTER -->
+  <footer>
+    <p>With love, Arjae & Thea</p>
+  </footer>
 
-</div>
+  <!-- MUSIC BUTTON -->
+  <button id="music-toggle" aria-label="Toggle Music">
+    <i class="fa fa-music"></i>
+  </button>
 
-</section>
+  <!-- BACKGROUND MUSIC -->
+  <audio id="bg-music" loop>
+    <source src="assets/music/song.mp3" type="audio/mpeg">
+  </audio>
 
-<!-- RSVP -->
-<section id="rsvp" class="section light" data-aos="fade-up">
-  <h2>RSVP</h2>
-  <a href="https://forms.gle/hrAmqvdcCH5WxZmt9" target="_blank" class="btn">
-    Click Here to RSVP
-  </a>
-</section>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
 
-<footer>
-  <p>With love, Arjae & Thea</p>
-</footer>
-
-<!-- Background Music -->
-<audio id="bg-music" autoplay loop muted>
-  <source src="assets/music/song.mp3" type="audio/mpeg">
-</audio>
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script src="script.js"></script>
 </body>
 </html>

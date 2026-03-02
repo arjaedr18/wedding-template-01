@@ -1,33 +1,64 @@
-AOS.init({ duration:1200, once:true });
+// AOS Animation
+AOS.init({ duration: 1200, once: true });
 
+// COUNTDOWN
 const countdown = document.getElementById('countdown');
 const weddingDate = new Date("2027-12-01T15:00:00").getTime();
 
-function updateCountdown(){
+function updateCountdown() {
   const now = new Date().getTime();
   const distance = weddingDate - now;
 
-  if(distance < 0){
+  if(distance < 0) {
     countdown.innerHTML = "We're Married!";
     return;
   }
 
   const d = Math.floor(distance / (1000*60*60*24));
-  const h = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-  const m = Math.floor((distance%(1000*60*60))/(1000*60));
-  const s = Math.floor((distance%(1000*60))/1000);
+  const h = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+  const m = Math.floor((distance % (1000*60*60)) / (1000*60));
+  const s = Math.floor((distance % (1000*60)) / 1000);
 
   countdown.innerHTML = `${d}d ${h}h ${m}m ${s}s`;
 }
-
-setInterval(updateCountdown,1000);
+setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// Music autoplay workaround
+// SCROLL PROGRESS
+window.addEventListener('scroll', () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (scrollTop / height) * 100;
+  document.getElementById('progress-bar').style.width = scrolled + '%';
+});
+
+// LOADER
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('loader').style.opacity = '0';
+    setTimeout(() => { document.getElementById('loader').style.display = 'none'; }, 1000);
+  }, 1500);
+});
+
+// MUSIC TOGGLE (optional, no autoplay)
 const music = document.getElementById('bg-music');
-function enableMusic(){
-  music.muted=false;
-  music.play();
-  window.removeEventListener('click',enableMusic);
-}
-window.addEventListener('click',enableMusic);
+const musicBtn = document.getElementById('music-toggle');
+
+musicBtn.addEventListener('click', () => {
+  if(music.paused) {
+    music.play();
+    musicBtn.innerHTML = '<i class="fa fa-music"></i>'; // icon stays
+  } else {
+    music.pause();
+    musicBtn.innerHTML = '<i class="fa fa-volume-off"></i>';
+  }
+});
+const video = document.getElementById('wedding-video');
+const playButton = document.getElementById('video-play-button');
+
+playButton.addEventListener('click', () => {
+  video.muted = false; // unmute if you want sound
+  video.play();         // start video
+  playButton.style.display = 'none'; // hide button
+  video.setAttribute('controls', ''); // show native controls
+});
